@@ -1,0 +1,11 @@
+@IMPORT url("https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans|Roboto");
+
+body {
+	background: #c0c0c0;
+	display: block;
+}
+
+h2 {
+	font-family: Inconsolata;
+	font-size: 20px;
+}

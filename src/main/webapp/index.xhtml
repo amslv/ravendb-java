@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Gerenciamento de Fornecedores</title>
+	<h:outputStylesheet library="ravendb" name="layout.css"></h:outputStylesheet>
+</h:head>
+
+<h:body>
+	<h2>Listagem de Fornecedores</h2>
+	<p:toolbar>
+		<p:toolbarGroup align="left">
+			<p:button id="novoFornecedor" value="Cadastrar Fornecedor" icon="fa fa-fw fa-plus" outcome="edit_fornecedor">
+			</p:button>
+		</p:toolbarGroup>
+	</p:toolbar>
+	<p:dataTable id="tableFornecedores">
+		<f:facet name="header">
+			Fornecedores cadastrados no sistema
+		</f:facet>
+		<p:column headerText="ID">
+		
+		</p:column>
+		<p:column headerText="Nome Fantasia">
+		</p:column>
+		<p:column headerText="Razão Social">
+		
+		</p:column>
+		<p:column headerText="CNPJ">
+		
+		</p:column>
+		<p:column headerText="Endereço">
+		
+		</p:column>
+		<p:column headerText="E-mail">
+		
+		</p:column>
+		<p:column headerText="Produtos Fornecidos">
+		
+		</p:column>
+		<p:column headerText="Ações">
+		
+		</p:column>
+	</p:dataTable>
+</h:body>
+
+</html>

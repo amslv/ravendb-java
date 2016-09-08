@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Gerenciamento de Fornecedores</title>
+	<h:outputStylesheet library="ravendb" name="layout.css"></h:outputStylesheet>
+</h:head>
+
+<h:body>
+	<h2>Cadastro/Edição de Fornecedores</h2>
+	<h:form>
+		<p:growl id="messages" showDetail="false" />
+		<p:fieldset id="field_edit_fornecedores" style="layout: grid;">
+			<h2>Informações Básicas</h2>
+			<p:panelGrid columns="2" style="width:600px;" layout="grid"
+				columnClasses="ui-grid-col-2, ui-grid-col-4, ui-grid-col-2, ui-grid-col-4"
+				styleClass="panelgrid-noborder">
+				<h:outputText for="nome_fantasia" value="Nome Fantasia:"></h:outputText>
+				<p:inputText id="nome_fantasia" required="true"
+					requiredMessage="O nome fantasia não pode ficar em branco."></p:inputText>
+				<h:outputText for="cnpj" value="CNPJ:"></h:outputText>
+				<p:inputMask id="cnpj" mask="99.999.999/9999-99" required="true"
+					requiredMessage="O CNPJ não pode ficar em branco."></p:inputMask>
+				<h:outputText for="email" value="E-mail:"></h:outputText>
+				<p:inputText id="email" type="email" required="true"
+					requiredMessage="O e-mail não pode ficar em branco."></p:inputText>
+			</p:panelGrid>
+			<h2>Endereço</h2>
+			<p:panelGrid columns="2" style="width:600px;" layout="grid"
+				columnClasses="ui-grid-col-2, ui-grid-col-4, ui-grid-col-2, ui-grid-col-4"
+				styleClass="panelgrid-noborder">
+				<h:outputText for="rua" value="Rua:"></h:outputText>
+				<p:inputText id="rua" required="true"
+					requiredMessage="O nome da rua não pode ficar em branco."></p:inputText>
+				<h:outputText for="numero" value="Número:"></h:outputText>
+				<p:inputText id="numero" required="true"
+					requiredMessage="O número da rua não pode ficar em branco."></p:inputText>
+				<h:outputText for="bairro" value="Bairro:"></h:outputText>
+				<p:inputText id="bairro" required="true"
+					requiredMessage="O nome do bairro não pode ficar em branco."></p:inputText>
+				<h:outputText for="cidade" value="Cidade:"></h:outputText>
+				<p:inputText id="cidade" required="true"
+					requiredMessage="O nome da cidade não pode ficar em branco."></p:inputText>
+				<h:outputText for="uf" value="UF:"></h:outputText>
+				<p:inputText id="uf" required="true"
+					requiredMessage="A UF não pode ficar em branco."></p:inputText>
+			</p:panelGrid>
+			<h2>Produtos Fornecidos</h2>
+			<p:dataTable id="tabelaProdutos">
+				<f:facet name="header">
+				Lista de Produtos Fornecidos
+			</f:facet>
+				<p:column headerText="ID">
+				</p:column>
+				<p:column headerText="SKU">
+
+				</p:column>
+				<p:column headerText="Nome">
+
+				</p:column>
+				<p:column headerText="Descrição">
+
+				</p:column>
+				<p:column headerText="Preço">
+
+				</p:column>
+				<p:column headerText="Ações">
+
+				</p:column>
+			</p:dataTable>
+			<p:separator></p:separator>
+		</p:fieldset>
+	</h:form>
+</h:body>
+</html>

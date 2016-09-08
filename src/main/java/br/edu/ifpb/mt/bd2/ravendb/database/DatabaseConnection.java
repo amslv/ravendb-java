@@ -8,7 +8,7 @@ public class DatabaseConnection {
 	private static IDocumentStore store;
 
 	public static IDocumentStore openConnection() {
-		store = new DocumentStore("http://desktop-dcll8kb:8080/");
+		store = new DocumentStore("http://localhost:8080/");
 		return store.initialize();
 	}
 	
